@@ -20,7 +20,7 @@ pipeline {
                   def logz = currentBuild . rawBuild . getLog ( 1000 );
                   def resultado = logz . encontre {it . contém ( ' Sucesso ' )}
                   se (resultado) {
-                    erro (resultado ' FAILING TO DUE '  + )
+                    erro (resultado + ' FAILING TO DUE ' )
                 }
             }
            }
